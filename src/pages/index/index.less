@@ -1,0 +1,166 @@
+.page-index {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .page-image {
+    width: 100%;
+  }
+
+  .info-text {
+    text-align: center;
+    font-size: .8rem;
+    font-weight: bold;
+    margin: 40px;
+
+    .red-text {
+      color: red;
+    }
+  }
+
+
+  .form-view {
+    display: flex;
+    flex-direction: column;
+
+    .info-text {
+      text-align: center;
+      font-size: .8rem;
+      font-weight: bold;
+      margin: 50px;
+
+      .red-text {
+        color: red;
+      }
+    }
+
+
+    .input-title {
+      margin-top: 20px;
+      font-size: 0.6rem;
+      margin-left: 15px;
+    }
+
+    .page-input {
+      font-size: 0.6rem;
+      margin: 5px 15px;
+      padding-left: 10px;
+      border: solid gray 1px;
+      border-radius: 15px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+
+    .page-btn {
+      background: red;
+      text-align: center;
+      color: white;
+      margin: 50px;
+      font-size: 0.7rem;
+      padding-bottom: 22px;
+      padding-top: 22px;
+      border-radius: 50px;
+      -webkit-animation: free_download 1s linear alternate infinite;
+      animation: free_download 1s linear alternate infinite;
+    }
+
+  }
+
+  .right-tel {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    bottom: 350px;
+    right: 20px;
+  }
+
+
+
+  .bottom-view {
+    display: flex;
+    flex-direction: row;
+
+    :first-child {
+      height: 120px;
+      flex: 1;
+    }
+
+    :last-child {
+      height: 120px;
+      flex: 4;
+    }
+  }
+
+  .dialog-view {
+    position: fixed;
+    bottom: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .empty-view{
+      flex: 1;
+      background: #000000aa;
+    }
+
+    .form-view {
+      display: flex;
+      background: white;
+      flex-direction: column;
+
+      .info-text {
+        text-align: center;
+        font-size: .8rem;
+        font-weight: bold;
+        margin: 50px;
+
+        .red-text {
+          color: red;
+        }
+      }
+
+
+      .input-title {
+        margin-top: 20px;
+        font-size: 0.6rem;
+        margin-left: 15px;
+      }
+
+      .page-input {
+        font-size: 0.6rem;
+        margin: 5px 15px;
+        padding-left: 10px;
+        border: solid gray 1px;
+        border-radius: 15px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+
+      .page-btn {
+        background: red;
+        text-align: center;
+        color: white;
+        margin: 50px;
+        font-size: 0.7rem;
+        padding-bottom: 22px;
+        padding-top: 22px;
+        border-radius: 50px;
+      }
+    }
+  }
+
+
+}
+
+
+@-webkit-keyframes free_download{
+  0%{-webkit-transform:scale(0.9);}
+  100%{-webkit-transform:scale(1);}
+}
+@keyframes free_download{
+  0%{transform:scale(0.9);}
+  100%{transform:scale(1);}
+}
