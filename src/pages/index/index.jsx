@@ -24,6 +24,23 @@ export default class Index extends Component {
   }
 
   onBtnClick(name, phone) {
+
+    if (name.length < 1) {
+      Taro.showToast({
+        title: "设备名称不允许为空",
+        icon: "none"
+      })
+      return;
+    }
+
+    if (phone.length < 1 || phone.length != 11) {
+      Taro.showToast({
+        title: "请输入正确的手机号",
+        icon: "none"
+      })
+
+      return;
+    }
     Taro.request({
       url: "http://www.ceosta.org/shebei_/form/",
       method: "POST",
@@ -85,11 +102,11 @@ export default class Index extends Component {
   }
 
   setInputFocus(id) {
-    document.getElementById(id).setAttribute("style", "border: 1px solid red;");
+    document.getElementById(id).setAttribute("style", "border: 1px solid #ff5503;");
   }
 
   setInputBlur(id) {
-    document.getElementById(id).setAttribute("style", "border: 1px solid gray;");
+    document.getElementById(id).setAttribute("style", "border: 1px solid #aaaaaa;");
   }
 
   render() {
@@ -101,13 +118,13 @@ export default class Index extends Component {
         <View className="form-view">
           <Text className="info-text">测测您的二手设备<Text className="red-text">值</Text>多少钱</Text>
 
-          <Text className="input-title">设备名称<Text>*</Text></Text>
+          <Text className="input-title" >设备名称<Text className="red-text"> *</Text></Text>
           <Input className="page-input" onFocus={(event => {
             this.setInputFocus("name-1")
           })} onBlur={event => {
             this.setInputBlur(("name-1"))
           }} id="name-1" placeholder="您需要回收什么设备"/>
-          <Text className="input-title">联系电话<Text>*</Text></Text>
+          <Text className="input-title">联系电话<Text className="red-text"> *</Text></Text>
           <Input className="page-input" id="phone-1" placeholder="请输入手机号" onFocus={(event => {
             this.setInputFocus("phone-1")
           })} onBlur={event => {
@@ -124,13 +141,13 @@ export default class Index extends Component {
         <View className="form-view">
           <Text className="info-text">测测您的二手设备<Text className="red-text">值</Text>多少钱</Text>
 
-          <Text className="input-title">设备名称<Text>*</Text></Text>
+          <Text className="input-title">设备名称<Text className="red-text"> *</Text></Text>
           <Input className="page-input" id="name-2" placeholder="您需要回收什么设备" onFocus={(event => {
             this.setInputFocus("name-2")
           })} onBlur={event => {
             this.setInputBlur(("name-2"))
           }}/>
-          <Text className="input-title">联系电话<Text>*</Text></Text>
+          <Text className="input-title">联系电话<Text className="red-text"> *</Text></Text>
           <Input className="page-input" id="phone-2" placeholder="请输入手机号"
                  onFocus={(event => {
                    this.setInputFocus("phone-2")
@@ -147,13 +164,13 @@ export default class Index extends Component {
         <View className="form-view">
           <Text className="info-text">测测您的二手设备<Text className="red-text">值</Text>多少钱</Text>
 
-          <Text className="input-title">设备名称<Text>*</Text></Text>
+          <Text className="input-title">设备名称<Text className="red-text"> *</Text></Text>
           <Input className="page-input" id="name-3" placeholder="您需要回收什么设备" onFocus={(event => {
             this.setInputFocus("name-3")
           })} onBlur={event => {
             this.setInputBlur(("name-3"))
           }}/>
-          <Text className="input-title">联系电话<Text>*</Text></Text>
+          <Text className="input-title">联系电话<Text className="red-text"> *</Text></Text>
           <Input className="page-input" id="phone-3" placeholder="请输入手机号" onFocus={(event => {
             this.setInputFocus("phone-3")
           })} onBlur={event => {
@@ -191,16 +208,14 @@ export default class Index extends Component {
               }
               }></View>
               <View className="form-view">
-                <Text className="info-text">测测您的二手设备<Text className="red-text">值</Text>多少钱</Text>
+                <Text className="info-text">测测您的二手设备值多少钱</Text>
 
-                <Text className="input-title">设备名称<Text>*</Text></Text>
-                <Input className="page-input" id="name-4" placeholder="您需要回收什么设备" onFocus={(event => {
+                <Input className="page-input" id="name-4"  placeholder="您需要回收什么设备(必填)" onFocus={(event => {
                   this.setInputFocus("name-4")
                 })} onBlur={event => {
                   this.setInputBlur(("name-4"))
                 }}/>
-                <Text className="input-title">联系电话<Text>*</Text></Text>
-                <Input className="page-input" id="phone-4" placeholder="请输入手机号" onFocus={(event => {
+                <Input className="page-input" id="phone-4" placeholder="请输入手机号(必填)" onFocus={(event => {
                   this.setInputFocus("phone-4")
                 })} onBlur={event => {
                   this.setInputBlur(("phone-4"))
