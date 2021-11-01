@@ -222,7 +222,7 @@ export default class Index extends Component {
                 }}/>
 
                 <View className="page-btn"
-                      onClick={() => this.onBtnClick(document.getElementById("name-3").value, document.getElementById("phone-3").value)}>立刻获取回收报价</View>
+                      onClick={() => this.onBtnClick(document.getElementById("name-4").value, document.getElementById("phone-4").value)}>立刻获取回收报价</View>
               </View>
 
             </View>
