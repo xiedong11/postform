@@ -10,8 +10,8 @@ import ic_4 from "../image/ic_4.jpg"
 import ic_5 from "../image/ic_5.jpg"
 import ic_6 from "../image/ic_6.jpg"
 import ic_right_tel from "../image/ic_right_tel.png"
-import ic_bottom_right from "../image/ic_bottom_right.jpg"
-import ic_bottom_left from "../image/ic_bottom_left.jpg"
+import ic_bottom_right from "../image/ic_bottom_right.png"
+import ic_bottom_left from "../image/ic_bottom_left.png"
 
 
 export default class Index extends Component {
