@@ -5,6 +5,7 @@ import "./index.less"
 import ic_0 from "../image/ic_0.jpg"
 import ic_1 from "../image/ic_1.jpg"
 import ic_2 from "../image/ic_2.jpg"
+import ic_20 from "../image/ic_20.jpg"
 import ic_3 from "../image/ic_3.jpg"
 import ic_4 from "../image/ic_4.jpg"
 import ic_5 from "../image/ic_5.jpg"
@@ -134,6 +135,7 @@ export default class Index extends Component {
           <View className="page-btn"
                 onClick={() => this.onBtnClick(document.getElementById("name-1").value, document.getElementById("phone-1").value)}>立刻获取回收报价</View>
         </View>
+        <Image mode="widthFix" className="page-image" src={ic_20}/>
         <Image mode="widthFix" className="page-image" src={ic_2}/>
         <Image mode="widthFix" className="page-image" src={ic_1}/>
         <Image mode="widthFix" className="page-image" src={ic_3}/>
